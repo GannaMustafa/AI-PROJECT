@@ -1,0 +1,11 @@
+id,site,room_code,capacity,room_type
+1,main_campus,A101,40,seminar
+2,main_campus,A102,45,seminar
+3,main_campus,A210,80,lecture
+4,main_campus,B004,160,lecture
+5,main_campus,B020,120,lecture
+6,main_campus,B105,60,seminar
+7,main_campus,LAB1,36,lab
+8,main_campus,LAB2,36,lab
+9,main_campus,LAB3,30,lab
+10,main_campus,C301,50,seminar
