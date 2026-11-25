@@ -56,22 +56,3 @@ def check_constraints (table) :
 
     return total
 
-
-if __name__ == "__main__":
-    # اختبار make_table
-    t = make_table()
-    print(f"طول الجدول: {len(t)}")
-    print(f"أول 3 عناصر: {t[:3]}")
-    print()
-    
-    # اختبار check_constraints
-    violations = check_constraints(t)
-    print(f"عدد التعارضات في جدول عشوائي: {violations}")
-    print("(المفروض رقم كبير لأن الجدول عشوائي)")
-    print()
-    
-    # اختبار copy_table
-    t2 = copy_table(t)
-    t2[0][0] = 999  # نعدل في النسخة
-    print(f"الأصل بعد التعديل: {t[0]}")  # المفروض ما يتأثرش
-    print(f"النسخة بعد التعديل: {t2[0]}")  # المفروض تتعدل
