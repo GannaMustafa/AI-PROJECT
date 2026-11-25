@@ -1,0 +1,27 @@
+id,programme,course_code,course_title,department,enrolled
+1,autumn_programme,CHM210,Organic Chemistry,sciences,38
+2,autumn_programme,CHM110,General Chemistry,sciences,84
+3,autumn_programme,PHY120,Mechanics and Waves,sciences,72
+4,autumn_programme,BIO130,Cell Biology,sciences,66
+5,autumn_programme,BIO240,Ecology and Fieldwork,sciences,24
+6,autumn_programme,MAT101,Calculus I,mathematics,96
+7,autumn_programme,MAT202,Linear Algebra,mathematics,44
+8,autumn_programme,MAT310,Probability Theory,mathematics,28
+9,autumn_programme,STA220,Statistics for Scientists,mathematics,58
+10,autumn_programme,CSC101,Programming Foundations,computing,90
+11,autumn_programme,CSC230,Databases,computing,40
+12,autumn_programme,CSC320,Operating Systems,computing,30
+13,autumn_programme,CSC340,Machine Learning Basics,computing,46
+14,autumn_programme,HIS110,Modern European History,humanities,52
+15,autumn_programme,HIS230,Historians at Work,humanities,20
+16,autumn_programme,PHI105,Introduction to Ethics,humanities,70
+17,autumn_programme,LIT210,The Victorian Novel,humanities,26
+18,autumn_programme,LNG101,Spanish for Beginners,languages,22
+19,autumn_programme,LNG102,German for Beginners,languages,18
+20,autumn_programme,LNG210,Intermediate French,languages,16
+21,autumn_programme,ART120,Drawing Studio,arts,18
+22,autumn_programme,ART230,Printmaking Workshop,arts,14
+23,autumn_programme,MUS110,Music Theory,arts,32
+24,autumn_programme,ECO101,Principles of Economics,humanities,140
+25,autumn_programme,PSY140,Introduction to Psychology,sciences,104
+26,autumn_programme,GEO150,Physical Geography,sciences,36
