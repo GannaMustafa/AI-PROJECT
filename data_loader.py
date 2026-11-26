@@ -44,8 +44,8 @@ sessions["room_type"] = sessions["room_id"].map(rooms["room_type"])
 sessions["day"] = sessions["slot_id"].map(time_slots["weekday"])
 sessions["period"] = sessions["slot_id"].map(time_slots["period_no"])
 
-sessions["department"] = sessions["course_id"].map(courses.set_index("id")["department"])
-sessions["start_time"] = sessions["slot_id"].map(time_slots.set_index("id")["starts_at"])
-sessions["end_time"] = sessions["slot_id"].map(time_slots.set_index("id")["ends_at"])
+sessions["department"] = sessions["course_id"].map(courses["department"])
+sessions["start_time"] = sessions["slot_id"].map(time_slots["starts_at"])
+sessions["end_time"] = sessions["slot_id"].map(time_slots["ends_at"])
 
 print(sessions.head())
