@@ -47,5 +47,3 @@ sessions["period"] = sessions["slot_id"].map(time_slots["period_no"])
 sessions["department"] = sessions["course_id"].map(courses["department"])
 sessions["start_time"] = sessions["slot_id"].map(time_slots["starts_at"])
 sessions["end_time"] = sessions["slot_id"].map(time_slots["ends_at"])
-
-print(sessions.head())

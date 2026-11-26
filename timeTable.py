@@ -1,17 +1,18 @@
-import pandas as pd 
+import data_loader
 import random
 
 
-courses = pd.read_csv("data/courses.csv").reset_index(drop = True)
-rooms = pd.read_csv("data/rooms.csv").reset_index(drop = True)
-sessions = pd.read_csv("data/sessions.csv").reset_index(drop = True)
+courses = data_loader.courses
+rooms = data_loader.rooms
+sessions = data_loader.sessions
+time_slots = data_loader.time_slots
 
 
 def make_table () :
     table = []
     for i in range(len(sessions)):
-        slot = random.randint(0, 39)
-        room = random.randint(0,9)
+        slot = random.randint(0, len(time_slots) - 1)
+        room = random.randint(0, len(rooms) - 1)
         table.append([
             slot,
             room
@@ -33,15 +34,13 @@ def copy_table(table):
 def check_constraints (table) :
     total = 0
     for i in range(len(table)):
+        teacher_i = sessions.iloc[i]['teacher_id'] 
         for j in range(i+1, len(table)) :
             if  table[i][1] == table[j][1] and table[i][0] == table[j][0]:
                 total += 1
 
-
-        teacher_i = sessions.iloc[i]['teacher_id'] 
-        for j in range(i + 1, len(table)):
             teacher_j = sessions.iloc[j]['teacher_id']
-            
+
             if teacher_i == teacher_j and table[i][0] == table[j][0]:
                 total += 1
 
@@ -49,10 +48,11 @@ def check_constraints (table) :
         index = table[i][1]
         room_capacity = rooms.iloc[index]['capacity']
         course_id = sessions.iloc[i]['course_id']
-        students_num = courses.iloc[course_id - 1]['enrolled']
+        students_num = courses.loc[course_id,'enrolled']
 
         if students_num > room_capacity :
             total += 1
 
     return total
+
 
